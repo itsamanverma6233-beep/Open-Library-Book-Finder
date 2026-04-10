@@ -14,6 +14,12 @@ searchBtn.addEventListener("click", function() {
     clearTimeout(debounceTimer);
     searchBooks();
 });
+searchInput.addEventListener("keypress", function(event) {
+    if(event.key === "Enter") {
+        clearTimeout(debounceTimer);
+        searchBooks();
+    }
+});
 
 searchInput.addEventListener("input", function() {
     clearTimeout(debounceTimer);
